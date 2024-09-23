@@ -1,10 +1,12 @@
-import NxWelcome from './nx-welcome';
+import { Header } from '@my-org/ui-shared';
+import { RecoilRoot } from 'recoil';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="frontend-challenge" />
-    </div>
+    <RecoilRoot>
+      <Header title="Todo App" />
+      <h1>Todo App</h1>
+    </RecoilRoot>
   );
 }
 
