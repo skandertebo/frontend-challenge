@@ -1,11 +1,10 @@
-import { Header } from '@my-org/ui-shared';
 import { RecoilRoot } from 'recoil';
+import TodoApp from './TodoApp';
 
 export function App() {
   return (
     <RecoilRoot>
-      <Header title="Todo App" />
-      <h1>Todo App</h1>
+      <TodoApp />
     </RecoilRoot>
   );
 }
