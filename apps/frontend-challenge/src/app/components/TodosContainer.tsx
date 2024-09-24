@@ -40,7 +40,9 @@ export default function TodosContainer() {
         </h2>
         <div className="flex items-center gap-x-4 flex-wrap">
           <p className="text-yellow-700">{subMessage}</p>
-          <Filters filters={filters} setFilters={setFilters} />
+          {todos.length > 0 && (
+            <Filters filters={filters} setFilters={setFilters} />
+          )}
         </div>
         <div className="flex flex-col h-full gap-8">
           <List className="overflow-y-auto max-h-[35vh]">

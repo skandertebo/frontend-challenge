@@ -27,7 +27,7 @@ export const Filters: React.FC<FiltersProps> = ({ filters, setFilters }) => {
   }
 
   return (
-    <div className="flex gap-4 items-center w-full justify-center px-2 md:px-4">
+    <div className="flex gap-4 items-center w-full justify-center px-2 md:px-4 animate-fadeIn">
       <div>
         <IoFilter className="text-yellow-900 h-5 w-5" />
       </div>
