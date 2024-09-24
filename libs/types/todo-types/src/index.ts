@@ -1,1 +1,1 @@
-export * from './lib/types-todo-types';
+export * from './lib/todo-types';

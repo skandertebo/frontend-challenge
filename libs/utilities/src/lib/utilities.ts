@@ -22,3 +22,10 @@ export const formatDate = (date: Date): string => {
 };
 
 export const cn = (...classes: ClassValue[]) => twMerge(clsx(...classes));
+export const generateRandomString = (length = 10): string => {
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  return Array.from({ length }, () =>
+    characters.charAt(Math.floor(Math.random() * characters.length))
+  ).join('');
+};
