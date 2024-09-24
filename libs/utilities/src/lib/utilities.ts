@@ -29,3 +29,15 @@ export const generateRandomString = (length = 10): string => {
     characters.charAt(Math.floor(Math.random() * characters.length))
   ).join('');
 };
+export const getColorFromPriority = (
+  priority: 'low' | 'medium' | 'high'
+): string => {
+  switch (priority) {
+    case 'low':
+      return 'green';
+    case 'medium':
+      return 'yellow';
+    case 'high':
+      return 'red';
+  }
+};

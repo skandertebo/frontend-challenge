@@ -7,9 +7,17 @@ export const getTodoListFromLocalStorage: () => Todo[] = () => {
   }
   try {
     const parsedList = JSON.parse(todoList);
-    const parseResult = todoListSchema.safeParse(parsedList);
+    if (!Array.isArray(parsedList)) {
+      return [];
+    }
+    const listWithDates = parsedList.map((todo) => ({
+      ...todo,
+      createdAt: new Date(todo.createdAt),
+      updatedAt: new Date(todo.updatedAt),
+    }));
+    const parseResult = todoListSchema.safeParse(listWithDates);
     if (parseResult.success) {
-      return parsedList;
+      return listWithDates;
     } else {
       return [];
     }

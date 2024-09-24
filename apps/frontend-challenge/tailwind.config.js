@@ -21,11 +21,16 @@ module.exports = {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
+        swipeIn: {
+          '0%': { transform: 'scaleY(0)', transformOrigin: 'top' },
+          '100%': { transform: 'scaleY(1)', transformOrigin: 'top' },
+        },
       },
       animation: {
         fadeOut: 'fadeOut 0.5s ease-in-out',
         fadeOutLater: 'fadeOut 0.5s 1.4s ease-in-out',
         fadeIn: 'fadeIn 0.5s ease-in-out',
+        swipeIn: 'swipeIn 0.2s ease-in-out',
       },
     },
   },
