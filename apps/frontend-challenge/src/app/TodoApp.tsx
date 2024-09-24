@@ -17,7 +17,12 @@ export default function TodoApp() {
           logo={<FaCheck className="animate-fadeIn h-12 w-12 text-white" />}
         />
       )}
-      <div className={cn('flex flex-col h-screen', showIntro && 'hidden')}>
+      <div
+        className={cn(
+          'flex flex-col h-screen overflow-y-auto',
+          showIntro && 'hidden'
+        )}
+      >
         <Header
           title="Todo App"
           headerClassName="bg-yellow-700 text-white md:py-6 gap-2 md:px-12"

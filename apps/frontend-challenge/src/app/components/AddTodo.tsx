@@ -6,7 +6,11 @@ import { toast } from 'react-toastify';
 import { useTodoForm } from '../hooks/useTodoForm';
 import useTodos from '../hooks/useTodos';
 
-export const AddTodo: React.FC = () => {
+export interface AddTodoProps {
+  position?: 'top' | 'bottom';
+}
+
+export const AddTodo: React.FC<AddTodoProps> = ({ position }) => {
   const { todos, addTodo } = useTodos();
   const { form, updateForm, resetForm } = useTodoForm();
   const [notesExpanded, toggleNotesExpanded] = useReducer(
@@ -42,7 +46,7 @@ export const AddTodo: React.FC = () => {
     <div
       className={cn(
         'flex flex-col mb-16 sm:mb-8',
-        todos.length > 0 && 'mt-auto mb-16 sm:mb-2'
+        position === 'bottom' && 'mt-auto mb-16 sm:mb-2'
       )}
     >
       <div className="flex flex-col">
