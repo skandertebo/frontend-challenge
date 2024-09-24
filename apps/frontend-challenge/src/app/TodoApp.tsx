@@ -5,7 +5,7 @@ import { FaCheck } from 'react-icons/fa';
 import TodosContainer from './components/TodosContainer';
 
 export default function TodoApp() {
-  const showIntro = useTimer(1800);
+  const showIntro = useTimer(1400);
 
   return (
     <>
@@ -13,7 +13,7 @@ export default function TodoApp() {
         <WelcomingPage
           title="Todo!"
           titleClassName="animate-fadeIn"
-          containerClassName="fixed animate-fadeOutLater flex-row gap-4"
+          containerClassName="fixed animate-fadeOutSlow flex-row gap-4 opacity-0"
           logo={<FaCheck className="animate-fadeIn h-12 w-12 text-white" />}
         />
       )}

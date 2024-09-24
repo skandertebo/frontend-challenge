@@ -2,11 +2,12 @@ import { Input, PrioritySelector, TextArea } from '@my-org/ui-shared';
 import { cn, generateRandomString } from '@my-org/utilities';
 import { useCallback, useReducer } from 'react';
 import { FaCirclePlus } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 import { useTodoForm } from '../hooks/useTodoForm';
 import useTodos from '../hooks/useTodos';
 
 export const AddTodo: React.FC = () => {
-  const { todos, addTodo, updateTodo, removeTodo } = useTodos();
+  const { todos, addTodo } = useTodos();
   const { form, updateForm, resetForm } = useTodoForm();
   const [notesExpanded, toggleNotesExpanded] = useReducer(
     (prev) => !prev,
@@ -23,6 +24,7 @@ export const AddTodo: React.FC = () => {
       status: 'todo',
     });
     resetForm();
+    toast.success('Todo added successfully!');
   }, [addTodo, form]);
 
   const handleInputChange = (
@@ -91,6 +93,7 @@ export const AddTodo: React.FC = () => {
           name="description"
           onChange={handleInputChange}
           className="p-2 border border-yellow-700 rounded-md -mt-2 w-full focus:outline-none focus:ring-1 focus:ring-yellow-700 transition-colors"
+          onKeyDown={(e) => e.key === 'Enter' && handleAddTodo()}
         />
         <button
           onClick={toggleNotesExpanded}
