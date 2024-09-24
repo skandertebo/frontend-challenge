@@ -5,7 +5,7 @@ import { FaCheck } from 'react-icons/fa';
 import TodosContainer from './components/TodosContainer';
 
 export default function TodoApp() {
-  const showIntro = useTimer(1400);
+  const showIntro = useTimer(1700);
 
   return (
     <>
