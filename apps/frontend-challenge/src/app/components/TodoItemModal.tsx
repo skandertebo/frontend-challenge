@@ -25,7 +25,7 @@ export const TodoItemModal: React.FC<TodoItemModalProps> = ({
 
   return (
     <GenericModal onClose={onClose} isOpen={isOpen}>
-      <div className="flex flex-col w-[80vh] max-w-[500px] max-h-[600px] overflow-y-auto p-4">
+      <div className="flex flex-col w-[80vw] max-w-[500px] max-h-[600px] overflow-y-auto p-4">
         <h1 className="text-xl font-semibold mb-2">{todo.title}</h1>
         <div className="text-sm text-gray-500">
           <span>Created: {formatDate(todo.createdAt)}</span>
