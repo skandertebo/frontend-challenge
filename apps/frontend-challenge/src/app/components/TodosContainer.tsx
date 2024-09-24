@@ -14,8 +14,8 @@ export default function TodosContainer() {
       : `You have ${todos.length} ${todos.length === 1 ? 'todo' : 'todos'}.`;
 
   return (
-    <div className="md:p-6 p-2 animate-fadeIn h-full flex-1">
-      <div className="flex flex-col gap-4 p-4 md:p-8 border border-yellow-700 rounded-xl h-full">
+    <div className="md:px-6 md:py-6 px-1 py-2 animate-fadeIn h-full flex-1">
+      <div className="flex flex-col gap-4 px-2 py-4 md:px-8 md:py-8 border border-yellow-700 rounded-xl h-full">
         <h2 className="text-2xl text-center font-semibold text-yellow-700">
           {welcomingMessage}
         </h2>

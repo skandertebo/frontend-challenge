@@ -11,7 +11,7 @@ export const ConfirmDeleteTodo: React.FC<ConfirmDeleteTodoProps> = ({
 }) => {
   return (
     <GenericModal isOpen={isOpen} onClose={onClose}>
-      <div className="flex flex-col gap-8 items-center px-8 py-2 w-[80vh] max-w-[500px]">
+      <div className="flex flex-col gap-8 items-center px-8 py-2 w-[80vw] max-w-[500px]">
         <h2 className="text-xl font-medium text-yellow-800">
           Are you sure you want to delete this todo?
         </h2>

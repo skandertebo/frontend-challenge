@@ -19,9 +19,12 @@ export const StatusSelect: React.FC<StatusSelectProps> = ({
   return (
     <select
       value={value}
-      onChange={(e) => onChange(e.target.value as Todo['status'])}
+      onChange={(e) => {
+        e.stopPropagation();
+        onChange(e.target.value as Todo['status']);
+      }}
       className={cn(
-        'border border-gray-300 px-2 py-1 rounded-md',
+        'border border-gray-300 px-0 md:px-2 py-1 rounded-md text-sm',
         'text-white',
         'focus:outline-none',
         colorClasses[value as keyof typeof colorClasses],

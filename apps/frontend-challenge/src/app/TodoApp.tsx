@@ -1,16 +1,11 @@
+import { useTimer } from '@my-org/hooks';
 import { Header, WelcomingPage } from '@my-org/ui-shared';
 import { cn } from '@my-org/utilities';
-import { useEffect, useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import TodosContainer from './components/TodosContainer';
 
 export default function TodoApp() {
-  const [showIntro, setShowIntro] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setShowIntro(false);
-    }, 2100);
-  }, []);
+  const showIntro = useTimer(1800);
 
   return (
     <>

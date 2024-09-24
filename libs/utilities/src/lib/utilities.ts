@@ -41,3 +41,7 @@ export const getColorFromPriority = (
       return 'red';
   }
 };
+
+export const formatTrimmedText = (text: string, maxLength = 50): string => {
+  return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
+};
