@@ -27,9 +27,11 @@ export const Filters: React.FC<FiltersProps> = ({ filters, setFilters }) => {
   }
 
   return (
-    <div className="flex gap-4 items-center w-full">
-      <IoFilter className="text-yellow-900 h-5 w-5" />
-      <div className="flex items-center justify-between gap-x-8">
+    <div className="flex gap-4 items-center w-full justify-center px-2 md:px-4">
+      <div>
+        <IoFilter className="text-yellow-900 h-5 w-5" />
+      </div>
+      <div className="flex items-center gap-x-16 flex-wrap">
         <div className="flex gap-2 items-center">
           <span className="text-yellow-900 font-semibold">Status:</span>
           <input
