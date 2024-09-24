@@ -14,7 +14,7 @@ export default function useTodos(): UseTodosReturn {
   const [todos, setTodos] = useRecoilState(todoListState);
 
   function addTodo(todo: Todo) {
-    const newTodos = [...todos, todo];
+    const newTodos = [todo, ...todos];
     setTodos(newTodos);
     setTodoListToLocalStorage(newTodos);
   }
