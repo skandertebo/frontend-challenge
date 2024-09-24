@@ -24,7 +24,9 @@ export const AddTodo: React.FC = () => {
       status: 'todo',
     });
     resetForm();
-    toast.success('Todo added successfully!');
+    toast.success('Todo added successfully!', {
+      autoClose: 1400,
+    });
   }, [addTodo, form]);
 
   const handleInputChange = (
